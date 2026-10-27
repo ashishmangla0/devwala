@@ -1,0 +1,9 @@
+@use "./variables";
+
+:root {
+	--text-color: #{variables.$text};
+
+	@each $name, $color in variables.$theme-colors {
+		--background-#{$name}: #{$color};
+	}
+}

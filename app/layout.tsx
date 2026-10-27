@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Eyebrow } from "@/app/components/eyebrow/Eyebrow";
 import { siteConfig } from "@/config/site";
-import "./globals.css";
+import "@/styles/global.scss";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,11 +25,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body>
         {siteConfig.eyebrow.enabled && (
           <Eyebrow/>
         )}
-        {children}
+        <main>
+{children}
+        </main>
+        
       </body>
     </html>
   );
