@@ -3,6 +3,8 @@
 :root {
 	--text-color: #{variables.$text};
 	--font-size-base: #{variables.$font-size-base};
+	--font-size-md: #{variables.$font-size-md};
+	--font-size-sm: #{variables.$font-size-sm};
 
 	@each $name, $color in variables.$theme-colors {
 		--background-#{$name}: #{$color};

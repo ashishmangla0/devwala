@@ -1,3 +1,15 @@
 .body {
   color: inherit;
+
+  &_normal {
+    font-size: var(--font-size-base);
+  }
+
+  &_medium {
+    font-size: var(--font-size-md);
+  }
+
+  &_small {
+    font-size: var(--font-size-sm);
+  }
 }
