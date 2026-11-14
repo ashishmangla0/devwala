@@ -2,8 +2,10 @@
 
 :root {
 	--text-color: #{variables.$text};
+	--font-size-base: #{variables.$font-size-base};
 
 	@each $name, $color in variables.$theme-colors {
 		--background-#{$name}: #{$color};
+		--color-#{$name}: #{$color};
 	}
 }

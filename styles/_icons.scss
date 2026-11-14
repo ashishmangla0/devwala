@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "devwala";
+  src: url("/font/devwala.eot?55198593");
+  src:
+    url("/font/devwala.eot?55198593#iefix") format("embedded-opentype"),
+    url("/font/devwala.woff2?55198593") format("woff2"),
+    url("/font/devwala.woff?55198593") format("woff"),
+    url("/font/devwala.ttf?55198593") format("truetype"),
+    url("/font/devwala.svg?55198593#devwala") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "devwala";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+  display: inline-flex;
+  text-decoration: inherit;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-twitter:before {
+  content: "\e800";
+} /* '' */
+.icon-facebook:before {
+  content: "\e801";
+} /* '' */
+.icon-discord:before {
+  content: "\e802";
+} /* '' */
+.icon-instagram:before {
+  content: "\e803";
+} /* '' */
+.icon-linkedin:before {
+  content: "\e804";
+} /* '' */
+.icon-pinterest:before {
+  content: "\e805";
+} /* '' */
+.icon-whatsapp:before {
+  content: "\e806";
+} /* '' */
+.icon-youtube:before {
+  content: "\e807";
+} /* '' */

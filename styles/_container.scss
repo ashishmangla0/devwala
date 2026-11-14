@@ -1,0 +1,24 @@
+@use "sass:map";
+@use "./variables" as vars;
+
+@mixin make-container($gutter: 0.75rem) {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: $gutter;
+}
+
+@mixin make-container-max-widths(
+  $max-widths: vars.$container-max-widths,
+  $breakpoints: vars.$grid-breakpoints
+) {
+  @each $breakpoint, $max-width in $max-widths {
+    @media (min-width: map.get($breakpoints, $breakpoint)) {
+      max-width: $max-width;
+    }
+  }
+}
+
+.container {
+  @include make-container();
+  @include make-container-max-widths();
+}

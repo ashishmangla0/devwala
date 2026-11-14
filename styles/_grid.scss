@@ -1,0 +1,61 @@
+@use "sass:map";
+@use "sass:math";
+@use "./variables" as vars;
+
+// Bootstrap-style grid: .row > .col-12 .col-md-6 ...
+// Mobile-first: base classes apply always, .col-{breakpoint}-* apply from
+// that breakpoint up (sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px).
+
+$breakpoints: vars.$grid-breakpoints;
+$columns: vars.$grid-columns;
+$half-gutter: math.div(vars.$grid-gutter-width, 2);
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-inline: -$half-gutter;
+
+  // Every direct child is a column: full width until a col-* class says otherwise
+  > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-inline: $half-gutter;
+  }
+}
+
+.col {
+  flex: 1 0 0%;
+}
+
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+@for $i from 1 through $columns {
+  .col-#{$i} {
+    flex: 0 0 auto;
+    width: math.percentage(math.div($i, $columns));
+  }
+}
+
+@each $name, $min-width in $breakpoints {
+  @media (min-width: $min-width) {
+    .col-#{$name} {
+      flex: 1 0 0%;
+    }
+
+    .col-#{$name}-auto {
+      flex: 0 0 auto;
+      width: auto;
+    }
+
+    @for $i from 1 through $columns {
+      .col-#{$name}-#{$i} {
+        flex: 0 0 auto;
+        width: math.percentage(math.div($i, $columns));
+      }
+    }
+  }
+}
