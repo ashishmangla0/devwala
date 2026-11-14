@@ -1,0 +1,34 @@
+.eyebrow {
+  // padding-block: 1rem;
+  background: var(--background-secondary);
+  background: linear-gradient(
+    to right,
+    var(--background-secondary) 90%,
+    var(--background-primary) 10%
+  );
+
+  &_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &_right {
+    position: relative;
+    padding-block: 0.5rem;
+    background: var(--background-primary);
+    //background: url('/path1.png') no-repeat center center;
+    padding-inline: 0.75rem;
+    &::before {
+      content: "";
+      background: var(--background-primary);
+      border-radius: 0.5rem 0 0 0.875rem;
+      width: 20px;
+      height: calc(100% - 2px);
+      position: absolute;
+      top: 0;
+      left: -14px;
+      transform: rotate(15deg);
+    }
+  }
+}

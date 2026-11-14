@@ -1,0 +1,100 @@
+.hero {
+  min-height: 500px;
+  height: calc(100vh - 48px);
+
+  &_container{
+    height: 100%;
+    display: grid;
+    width: 100%;
+    align-items: center;
+  }
+
+  &_row{
+    align-items: center;
+  }
+
+  &_title{
+    font-size:54px;
+    font-weight: 500;
+  }
+  &_content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    max-width: 36rem;
+  }
+
+  &_title {
+    // Extra specificity to beat Text's [data-level="h1"] size
+    // & {
+    //   font-size: clamp(2.25rem, 5vw, 3.5rem);
+    //   line-height: 1.1;
+    //   letter-spacing: -0.03em;
+    // }
+  }
+
+  &_description {
+    font-size: 1.125rem;
+    //line-height: 1.7;
+    //color: rgb(255 255 255 / 75%);
+  }
+
+  &_actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  &_button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3rem;
+    padding-inline: 1.5rem;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition:
+      transform 0.15s ease,
+      background-color 0.15s ease,
+      color 0.15s ease,
+      border-color 0.15s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--background-primary);
+      outline-offset: 2px;
+    }
+
+    &_primary {
+      background: var(--background-primary);
+      color: var(--background-secondary);
+
+      &:hover {
+        background: color-mix(in srgb, var(--background-primary) 88%, #fff);
+      }
+    }
+
+    &_secondary {
+      border: 1px solid rgb(255 255 255 / 40%);
+      color: #fff;
+
+      &:hover {
+        border-color: var(--background-primary);
+        color: var(--background-primary);
+      }
+    }
+  }
+
+  &_visual {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+  }
+}

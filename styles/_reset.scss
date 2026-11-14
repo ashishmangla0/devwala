@@ -1,3 +1,24 @@
 *, ::after, ::before {
     box-sizing: border-box;
 }
+
+*{
+    margin-top:0;
+
+}
+body{
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+a{
+    text-decoration: none;
+}
+
+// Code samples use the mono font loaded via next/font (--font-mono on <html>)
+code, pre, kbd, samp {
+    font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+

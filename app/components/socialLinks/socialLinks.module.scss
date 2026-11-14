@@ -1,0 +1,57 @@
+.socialLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+
+  &_item {
+    display: flex;
+  }
+
+  &_link {
+    background: var(--background-secondary);
+    color: var(--background-primary);
+    display: inline-flex;
+    padding: 0.5rem;
+    line-height: 1;
+    border-radius: 50%;
+    // display: inline-flex;
+    // align-items: center;
+    // justify-content: center;
+    // width: 2.5rem;
+    // height: 2.5rem;
+    // border-radius: 999px;
+    // color: var(--foreground);
+    // background: var(--background);
+    // border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+    // transition:
+    //   transform 0.15s ease,
+    //   background-color 0.15s ease,
+    //   color 0.15s ease;
+
+    &:hover {
+      // background: var(--primary);
+      // color: var(--primary-foreground);
+      // transform: translateY(-2px);
+    }
+
+    &:focus-visible {
+      // outline: 2px solid var(--primary);
+      // outline-offset: 2px;
+    }
+  }
+
+  &_icon {
+    font-size: 0.75rem;
+    display: inline-flex;
+
+    // Repeat the hashed class for extra specificity so this beats Fontello's
+    // `.2em` animation-center compensation and keeps the glyph optically centered
+    // &::before {
+    //   margin-left: 0;
+    // }
+  }
+}
