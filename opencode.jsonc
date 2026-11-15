@@ -1,0 +1,19 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permissions": [
+    // Base policy already asks before .env reads — these make it a hard block
+    // (last match wins, so these override the built-in ask/allow defaults).
+    { "action": "read", "resource": "*.env", "effect": "deny" },
+    { "action": "read", "resource": "*.env.*", "effect": "deny" },
+    { "action": "edit", "resource": "*.env", "effect": "deny" },
+    { "action": "edit", "resource": "*.env.*", "effect": "deny" },
+
+    // Keep the safe template readable (re-allow after the deny above)
+    { "action": "read", "resource": "*.env.example", "effect": "allow" },
+
+    // Close the shell backdoor (cat/type/Get-Content would otherwise read it)
+    { "action": "shell", "resource": "cat *.env*", "effect": "deny" },
+    { "action": "shell", "resource": "type *.env*", "effect": "deny" },
+    { "action": "shell", "resource": "Get-Content *.env*", "effect": "deny" }
+  ]
+}
