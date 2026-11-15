@@ -10,6 +10,7 @@
 $primary:   #baf915; // lime accent — buttons, highlights, dots
 $secondary: #224433; // dark green — text on lime, hovers
 $text:      #191919; // default body text
+$text-inverse: #e6e6e6; // inverted $text (#191919 → #e6e6e6) — text on dark surfaces
 $gray-100:  #f5f5f5; // light surface / border tone
 
 // --------------------------------------------------------------------------
@@ -19,7 +20,13 @@ $gray-100:  #f5f5f5; // light surface / border tone
 $theme-colors: (
   "primary":   $primary,
   "secondary": $secondary,
-  "gray-100":  $gray-100,
+  "gray-100":  $gray-100
+);
+
+// Text tokens — emitted as --color-* only, never as --background-* (see _root.scss)
+$text-colors: (
+  "text-color":         $text,
+  "text-color-inverse": $text-inverse,
 );
 
 // --------------------------------------------------------------------------

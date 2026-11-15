@@ -1,7 +1,6 @@
 @use "./variables";
 
 :root {
-	--text-color: #{variables.$text};
 	--font-size-base: #{variables.$font-size-base};
 	--font-size-md: #{variables.$font-size-md};
 	--font-size-sm: #{variables.$font-size-sm};
@@ -10,5 +9,10 @@
 	@each $name, $color in variables.$theme-colors {
 		--background-#{$name}: #{$color};
 		--color-#{$name}: #{$color};
+	}
+
+	// Text tokens: emit --color-* only, no --background-* variants
+	@each $name, $color in variables.$text-colors {
+		--#{$name}: #{$color};
 	}
 }
