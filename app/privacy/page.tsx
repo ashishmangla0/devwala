@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { Heading } from "@/app/components/heading";
-import { Body } from "@/app/components/body";
+import { Heading } from "@/components/heading";
+import { Body } from "@/components/body";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",

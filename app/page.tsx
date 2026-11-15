@@ -1,5 +1,4 @@
 
-import { Heading } from "@/components/heading/Heading";
 import { Hero } from "@/components/hero";
 import { HeroSection } from "@/components/herosection";
 
