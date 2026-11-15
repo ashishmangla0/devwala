@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
-import { Eyebrow } from "@/app/components/eyebrow/Eyebrow";
+import { Eyebrow } from "@/components/eyebrow/Eyebrow";
 import { siteConfig } from "@/config/site";
 import "@/styles/global.scss";
-import { Footer } from "./components/footer";
-import { Header } from "./components/header";
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
 
 const inter = Inter({
   variable: "--font-sans",

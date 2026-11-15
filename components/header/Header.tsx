@@ -48,9 +48,6 @@ export function Header({
           onClick={() => setOpen(false)}
         >
           {siteConfig.name}
-          <span className={styles.header_brand_dot} aria-hidden="true">
-            .
-          </span>
         </Link>
 
         <button

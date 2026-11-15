@@ -1,32 +1,64 @@
-$primary:                   #baf915;
-$secondary:                 #224433;
-$text:                      #191919;
-$gray-100:                  #f5f5f5;
-$font-size-base:            1rem !default;
-$font-size-md:                $font-size-base * .875 !default;
-$font-size-sm:                $font-size-base * .75 !default;
+// ==========================================================================
+// Devwala Design Tokens
+// Single source of truth for colors, typography, and layout variables.
+// Consumed by every partial via:  @use "./variables" as vars;
+// ==========================================================================
 
+// --------------------------------------------------------------------------
+// Colors
+// --------------------------------------------------------------------------
+$primary:   #baf915; // lime accent — buttons, highlights, dots
+$secondary: #224433; // dark green — text on lime, hovers
+$text:      #191919; // default body text
+$text-inverse: #e6e6e6; // inverted $text (#191919 → #e6e6e6) — text on dark surfaces
+$gray-100:  #f5f5f5; // light surface / border tone
+
+// --------------------------------------------------------------------------
+// Theme colors → emitted as CSS custom properties in _root.scss
+//   e.g. var(--background-primary), var(--color-secondary)
+// --------------------------------------------------------------------------
 $theme-colors: (
-  "primary": $primary,
+  "primary":   $primary,
   "secondary": $secondary,
-  "gray-100": $gray-100,
+  "gray-100":  $gray-100
 );
 
-$grid-columns: 12;
-$grid-gutter-width: 1.5rem;
+// Text tokens — emitted as --color-* only, never as --background-* (see _root.scss)
+$text-colors: (
+  "text-color":         $text,
+  "text-color-inverse": $text-inverse,
+);
 
+// --------------------------------------------------------------------------
+// Typography
+// --------------------------------------------------------------------------
+$font-size-base:   1rem !default;              // 16px
+$font-size-md:     $font-size-base * 0.875 !default;  // 14px
+$font-size-sm:     $font-size-base * 0.75 !default;   // 12px
+$line-height-base: 1.5 !default;
+
+// --------------------------------------------------------------------------
+// Grid (Bootstrap-compatible)
+// --------------------------------------------------------------------------
+
+// Columns & spacing
+$grid-columns:        12;
+$grid-gutter-width:   1.5rem;
+
+// Breakpoints — used by _grid.scss to generate .col-md-*, .d-lg-flex, etc.
 $grid-breakpoints: (
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
+  sm:  576px,
+  md:  768px,
+  lg:  992px,
+  xl:  1200px,
   xxl: 1400px,
 );
 
+// Container max-widths — paired 1:1 with the breakpoints above
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
+  sm:  540px,
+  md:  720px,
+  lg:  960px,
+  xl:  1140px,
   xxl: 1320px,
 );

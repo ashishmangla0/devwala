@@ -10,6 +10,7 @@ body{
     margin: 0;
     font-size: 1rem;
     color: var(--text-primary);
+    line-height: var(--line-height-base);
 }
 
 a{
@@ -21,7 +22,9 @@ code, pre, kbd, samp {
     font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
-
-p:last-child{
+// Kill the trailing margin on a block's final paragraph.
+// :last-of-type alone covers every :last-child case for the same tag
+// (a p that is the last child is by definition also the last p).
+p:last-of-type {
     margin-bottom: 0;
 }
