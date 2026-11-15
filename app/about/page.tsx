@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { SocialLinks } from "@/app/components/socialLinks";
+import { SocialLinks } from "@/components/socialLinks";
 
 export const metadata: Metadata = {
   title: "About",
