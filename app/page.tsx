@@ -32,9 +32,9 @@ export default function Home() {
       />
 
       <Hero
-        eyebrow="Online & offline developer learning"
-        title="Learn to Code Your Way — Anywhere"
-        description="Devwala is a developer learning platform where you train live online or in person — small batches, real projects, and mentors who write code for a living. New to programming or switching careers, we'll map a path to your goal."
+        eyebrow="Where Gen Z learns to code"
+        title="Learn to Code. Build Real Projects. Crack Placements."
+        description="Devwala trains college students, faculty, and career switchers to code — live online or in person, with small batches, mentors who actually ship code, and projects worth putting on your resume. No fluff, no theory dumps — just skills that hold up in an interview."
         primaryAction={{ href: "/contact", label: "Book a free demo" }}
         secondaryAction={{ href: "/services", label: "Explore programs" }}
       >
@@ -47,14 +47,66 @@ export default function Home() {
               Live online <strong>and</strong> classroom batches — Palwal,
               Faridabad &amp; Delhi NCR
             </li>
-            <li>Courses built around real projects, not video playlists</li>
+            <li>Projects you can link in interviews, not playlists you&apos;ll never finish</li>
             <li>Mentors who are working developers</li>
-            <li>Portfolio reviews and interview preparation</li>
+            <li>Placement prep — mock interviews, resume reviews &amp; DSA practice</li>
           </ul>
         </div>
       </Hero>
 
       <HeroSection />
+
+      {/* Built for students & faculty — speaks to the Gen Z audience directly */}
+      <section className="block">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <Heading as="h2">
+                Why do students &amp; teachers pick Devwala?
+              </Heading>
+              <Body className={styles.sectionIntro}>
+                Short answer: we teach the way Gen Z actually learns — fast,
+                hands-on, and built around your timetable. Here&apos;s the
+                longer answer.
+              </Body>
+            </div>
+
+            <div className="col-md-6">
+              <ul className={styles.reasons}>
+                <li>
+                  <Heading as="h3">No 40-hour playlists</Heading>
+                  <Body size="medium">
+                    Live sessions where you code along, ask questions in
+                    real time, and actually finish what you start.
+                  </Body>
+                </li>
+                <li>
+                  <Heading as="h3">A portfolio that does the talking</Heading>
+                  <Body size="medium">
+                    You leave with real projects on GitHub — the thing
+                    recruiters click before they read your resume.
+                  </Body>
+                </li>
+                <li>
+                  <Heading as="h3">Placement season, handled</Heading>
+                  <Body size="medium">
+                    Mock interviews, resume reviews, and DSA practice so
+                    you walk into placements prepared, not panicked.
+                  </Body>
+                </li>
+                <li>
+                  <Heading as="h3">For teachers too</Heading>
+                  <Body size="medium">
+                    Faculty get curriculum-aligned workshops and lab
+                    sessions — bring industry-grade teaching to your
+                    campus without rewriting your syllabus.
+                  </Body>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Programs — data from app/services/services.ts */}
       <section className="block">
@@ -141,7 +193,7 @@ export default function Home() {
         <div className="container">
           <div className={styles.ctaBand}>
             <div className={styles.ctaCopy}>
-              <Heading as="h2">Ready to learn to code?</Heading>
+              <Heading as="h2">Your first line of code starts here</Heading>
               <Body>
                 Book a free demo — tell us your goal and we&apos;ll recommend
                 the right program. No commitment, no pressure.

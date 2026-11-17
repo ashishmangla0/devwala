@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { Newsletter } from "../newsletter";
 import { Body } from "../body";
 import { getYear } from "@/utils/date";
 import styles from "./footer.module.scss";
@@ -12,6 +13,12 @@ const LEGAL_LINKS = [
 export const Footer = () => {
   return (
     <footer className={styles.footer}>
+      <section className={styles.footer_main}>
+        <div className="container">
+          <Newsletter />
+        </div>
+      </section>
+
       <section className={styles.footer_copyright}>
         <div className={`container ${styles.footer_copyright_container}`}>
           <Body as="p" size="medium" className={styles.footer_text}>
