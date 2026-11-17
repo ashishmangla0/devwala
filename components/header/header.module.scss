@@ -2,8 +2,66 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: #fff;
-  border-bottom: 1px solid var(--color-gray-100);
+
+  // Glass tokens — shared with the mobile dropdown (inherits custom properties)
+  --header-glass-bg: rgb(255 255 255 / 72%);
+  --header-glass-blur: blur(16px) saturate(180%);
+
+  background: #fff; // solid fallback where backdrop-filter isn't supported
+  border-bottom: 1px solid rgb(0 0 0 / 6%);
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  // Glass: translucent pane that blurs whatever scrolls underneath
+  @supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+    background: var(--header-glass-bg);
+    -webkit-backdrop-filter: var(--header-glass-blur);
+    backdrop-filter: var(--header-glass-blur);
+  }
+
+  // Eyebrow scrolled away → dark green glass (blur from @supports stays on)
+  &_scrolled {
+    //background: rgb(34 68 51 / 92%); // $secondary #224433
+    //border-bottom-color: rgb(255 255 255 / 12%);
+    box-shadow: 0 10px 30px rgb(0 0 0 / 18%);
+        backdrop-filter: blur(10px);
+    background-color: rgb(255 255 255 / 13%);
+
+    .header_brand {
+      //color: #fff;
+    }
+
+    .header_toggle {
+      //color: #fff;
+    }
+
+    .header_link {
+      color: rgb(255 255 255 / 85%);
+
+      &:hover {
+        color: var(--background-primary); // lime on dark
+      }
+    }
+
+    .header_link_active {
+      color: var(--background-primary);
+    }
+
+    .header_cta:focus-visible {
+      outline-color: var(--background-primary); // dark-green outline would vanish
+    }
+
+    // Mobile dropdown matches the bar (inline desktop nav must stay unboxed)
+    @media (max-width: 767.98px) {
+      .header_nav {
+        background: rgb(34 68 51 / 95%);
+        border-bottom-color: rgb(255 255 255 / 12%);
+        box-shadow: 0 16px 32px rgb(0 0 0 / 25%);
+      }
+    }
+  }
 
   &_container {
     display: flex;
@@ -19,6 +77,7 @@
     letter-spacing: -0.02em;
     color: var(--text-color);
     text-decoration: none;
+    transition: color 0.2s ease;
   }
 
   &_brand_dot {
@@ -39,6 +98,7 @@
     border: 0;
     cursor: pointer;
     color: var(--text-color);
+    transition: color 0.2s ease;
   }
 
   &_line {
@@ -78,15 +138,24 @@
     gap: 0.5rem;
     padding: 0.75rem 1.5rem 1.25rem;
     background: #fff;
-    border-bottom: 1px solid var(--color-gray-100);
+    border-bottom: 1px solid rgb(0 0 0 / 6%);
     box-shadow: 0 12px 24px rgb(0 0 0 / 8%);
+
+    // Same glass treatment as the bar when the browser supports blur
+    @supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+      background: var(--header-glass-bg);
+      -webkit-backdrop-filter: var(--header-glass-blur);
+      backdrop-filter: var(--header-glass-blur);
+    }
     opacity: 0;
     visibility: hidden;
     transform: translateY(-0.5rem);
     transition:
       opacity 0.2s ease,
       transform 0.2s ease,
-      visibility 0.2s;
+      visibility 0.2s,
+      background-color 0.3s ease,
+      border-color 0.3s ease;
 
     &.header_nav_open {
       opacity: 1;
@@ -110,6 +179,7 @@
     font-weight: 500;
     color: var(--text-color);
     text-decoration: none;
+    transition: color 0.2s ease;
 
     &:hover {
       color: var(--color-secondary);

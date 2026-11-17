@@ -1,0 +1,115 @@
+// ---------------------------------------------------------------------------
+// Home page sections (component styles live in their own modules)
+// ---------------------------------------------------------------------------
+
+.sectionIntro {
+  margin-top: 0.75rem;
+  max-width: 40rem;
+}
+
+.cards {
+  margin-top: 2rem;
+  row-gap: 1.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  height: 100%;
+  padding: 1.75rem;
+  background: #fff;
+  border: 1px solid rgb(0 0 0 / 8%);
+  border-radius: 14px;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    border-color 0.15s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgb(0 0 0 / 8%);
+    border-color: color-mix(in srgb, var(--background-primary) 60%, rgb(0 0 0 / 8%));
+  }
+}
+
+.cardLink {
+  margin-top: auto; // sticks to the card's bottom on equal-height rows
+  font-weight: 600;
+  color: var(--color-secondary);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Hero "What you get" panel
+.heroCard {
+  background: #fff;
+  border: 1px solid rgb(0 0 0 / 8%);
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 16px 40px rgb(0 0 0 / 6%);
+}
+
+.heroCardTitle {
+  color: var(--color-secondary);
+  font-weight: 700;
+  font-size: 1.125rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.heroCardList {
+  margin: 1rem 0 0;
+  padding-left: 1.15rem;
+  display: grid;
+  gap: 0.6rem;
+  line-height: 1.55;
+}
+
+// Lead-gen CTA band
+.ctaBand {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem 2rem;
+  padding: 3rem;
+  background: var(--background-secondary);
+  color: var(--color-text-inverse);
+  border-radius: 18px;
+}
+
+.ctaCopy {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 36rem;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding-inline: 1.75rem;
+  border-radius: 999px;
+  background: var(--background-primary);
+  color: var(--background-secondary);
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 0.15s ease,
+    background-color 0.15s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    background: color-mix(in srgb, var(--background-primary) 88%, #fff);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--background-primary);
+    outline-offset: 3px;
+  }
+}

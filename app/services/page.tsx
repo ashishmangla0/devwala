@@ -4,14 +4,11 @@ import Link from "next/link";
 import { Heading } from "@/components/heading";
 import { Body } from "@/components/body";
 
+import { SERVICES } from "./services";
+
 export const metadata: Metadata = {
   title: "Services",
 };
-
-const SERVICES = [
-  { href: "/services/technical-training", label: "Technical Training" },
-  { href: "/services/faculty-development", label: "Faculty Development Program" },
-];
 
 export default function ServicesPage() {
   return (
@@ -25,9 +22,9 @@ export default function ServicesPage() {
         </Body>
 
         <ul>
-          {SERVICES.map(({ href, label }) => (
-            <li key={href}>
-              <Link href={href}>{label}</Link>
+          {Object.entries(SERVICES).map(([slug, { title }]) => (
+            <li key={slug}>
+              <Link href={`/services/${slug}`}>{title}</Link>
             </li>
           ))}
         </ul>
