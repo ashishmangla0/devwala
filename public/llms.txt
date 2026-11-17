@@ -1,8 +1,8 @@
 # Devwala
 
-> Devwala is an online and offline developer learning platform. Students and
-> professionals learn to code through structured courses, hands-on projects,
-> and mentorship — live online or in person at our centers in India.
+> Devwala teaches students and professionals to code through structured
+> courses, hands-on projects, and mentorship — live online or in person at
+> our centers in India.
 
 Devwala teaches programming to students and working professionals and partners
 with colleges, schools, and institutes to deliver industry-ready training.
@@ -11,7 +11,7 @@ and Delhi NCR.
 
 ## Main pages
 
-- [Home](https://devwala.com/): Platform overview — learn to code online or offline
+- [Home](https://devwala.com/): Start here — learn to code online or offline
 - [About](https://devwala.com/about): Who Devwala is and what it stands for
 - [Services](https://devwala.com/services): All training programs offered by Devwala
 - [Contact](https://devwala.com/contact): Ways to reach Devwala
@@ -35,5 +35,5 @@ and Delhi NCR.
 
 ## Company & policies
 
-- [Terms & Conditions](https://devwala.com/terms): Terms of using the Devwala platform
+- [Terms & Conditions](https://devwala.com/terms): Terms of using Devwala
 - [Privacy Policy](https://devwala.com/privacy): How Devwala collects and protects your data
