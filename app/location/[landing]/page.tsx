@@ -5,11 +5,11 @@ import { notFound } from "next/navigation";
 import { Heading } from "@/components/heading";
 import { Body } from "@/components/body";
 
-import { LANDING_PAGES, type LandingSlug } from "./landing";
+import { LOCATIONS, type LocationSlug } from "./landing";
 
 /** Prerender the known slugs at build time. */
 export async function generateStaticParams() {
-  return Object.keys(LANDING_PAGES).map((landing) => ({ landing }));
+  return Object.keys(LOCATIONS).map((landing) => ({ landing }));
 }
 
 export async function generateMetadata({
@@ -18,20 +18,20 @@ export async function generateMetadata({
   params: Promise<{ landing: string }>;
 }): Promise<Metadata> {
   const { landing } = await params;
-  const entry = LANDING_PAGES[landing as LandingSlug];
+  const entry = LOCATIONS[landing as LocationSlug];
 
   return { title: entry?.title };
 }
 
-export default async function LandingPage({
+export default async function LocationPage({
   params,
 }: {
   params: Promise<{ landing: string }>;
 }) {
   const { landing } = await params;
-  const entry = LANDING_PAGES[landing as LandingSlug];
+  const entry = LOCATIONS[landing as LocationSlug];
 
-  // Unknown slug (e.g. /for-anything) → 404. dynamicParams is unavailable
+  // Unknown slug (e.g. /location/nope) → 404. dynamicParams is unavailable
   // with cacheComponents, so we validate manually per the Next.js docs.
   if (!entry) notFound();
 

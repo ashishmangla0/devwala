@@ -1,0 +1,39 @@
+# Devwala
+
+> Devwala is an online and offline developer learning platform. Students and
+> professionals learn to code through structured courses, hands-on projects,
+> and mentorship — live online or in person at our centers in India.
+
+Devwala teaches programming to students and working professionals and partners
+with colleges, schools, and institutes to deliver industry-ready training.
+Courses are available online and offline, with locations in Palwal, Faridabad,
+and Delhi NCR.
+
+## Main pages
+
+- [Home](https://devwala.com/): Platform overview — learn to code online or offline
+- [About](https://devwala.com/about): Who Devwala is and what it stands for
+- [Services](https://devwala.com/services): All training programs offered by Devwala
+- [Contact](https://devwala.com/contact): Ways to reach Devwala
+
+## Services
+
+- [Technical Training](https://devwala.com/services/technical-training): Hands-on programming training — languages, frameworks, and real projects — online or at your campus
+- [Faculty Development Program](https://devwala.com/services/faculty-development): Upskilling programs that help faculty teach modern development practices
+
+## Who we train
+
+- [For Colleges](https://devwala.com/for-colleges): Curriculum-aligned training, workshops, and placement preparation for college students
+- [For Schools](https://devwala.com/for-schools): Age-appropriate coding fundamentals for school students
+- [For Institutes](https://devwala.com/for-institutes): White-labeled technical programs and faculty support for training institutes
+
+## Locations
+
+- [Devwala in Palwal](https://devwala.com/location/devwala-in-palwal): Classroom training plus live online sessions in Palwal
+- [Devwala in Faridabad](https://devwala.com/location/devwala-in-faridabad): Hands-on developer courses in Faridabad
+- [Devwala in Delhi NCR](https://devwala.com/location/devwala-in-delhi-ncr): Weekend and weekday programs across Delhi NCR
+
+## Company & policies
+
+- [Terms & Conditions](https://devwala.com/terms): Terms of using the Devwala platform
+- [Privacy Policy](https://devwala.com/privacy): How Devwala collects and protects your data

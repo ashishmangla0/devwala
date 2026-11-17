@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { siteConfig } from "@/config/site";
 
 import styles from "./header.module.scss";
@@ -36,9 +37,15 @@ export function Header({
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
+  // The eyebrow bar sits above the sticky header — watch it so the header can
+  // restyle (dark green) once it has fully scrolled out of view.
+  // entry === null before the first observation, so no false "scrolled" flash.
+  const { entry: eyebrowEntry } = useIntersectionObserver("#site-eyebrow");
+  const scrolled = eyebrowEntry !== null && !eyebrowEntry.isIntersecting;
+
   return (
     <header
-      className={[styles.header, className].filter(Boolean).join(" ")}
+      className={`${styles.header} ${scrolled ? styles.header_scrolled : ""} ${className}`}
       data-testid="header"
     >
       <div className={`container ${styles.header_container}`}>
@@ -50,7 +57,7 @@ export function Header({
           {siteConfig.name}
         </Link>
 
-        <button
+        {/* <button
           type="button"
           className={styles.header_toggle}
           aria-expanded={open}
@@ -61,9 +68,9 @@ export function Header({
           <span className={styles.header_line} />
           <span className={styles.header_line} />
           <span className={styles.header_line} />
-        </button>
+        </button> */}
 
-        <nav
+        {/* <nav
           id="site-navigation"
           className={[
             styles.header_nav,
@@ -104,7 +111,7 @@ export function Header({
           >
             {cta.label}
           </Link>
-        </nav>
+        </nav> */}
       </div>
     </header>
   );

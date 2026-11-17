@@ -13,6 +13,11 @@
     align-items: center;
   }
 
+  &_left{
+    gap:1.25rem;
+    display: flex;
+  }
+
   &_right {
     position: relative;
     padding-block: 0.5rem;
@@ -30,5 +35,13 @@
       left: -12px;
       transform: rotate(15deg);
     }
+  }
+
+  &_link{
+    color: var(--text-color-inverse);
+    display: flex;
+    gap:0.5rem;
+    align-items: center;
+
   }
 }

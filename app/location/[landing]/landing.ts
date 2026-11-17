@@ -1,37 +1,16 @@
 /**
- * Root landing pages served by app/[landing] — one entry = one URL.
- * Add a slug here and the page exists: no new folder needed.
- *
- * Covers two families:
- *  - Audiences:  /for-colleges, /for-schools, /for-institutes
- *  - Locations:  /devwala-in-palwal, /devwala-in-faridabad, /devwala-in-delhi-ncr
+ * Location pages served by app/location/[landing] — one entry = one URL:
+ *   /location/devwala-in-palwal, /location/devwala-in-gurugram, …
+ * Add a slug here and the page exists — no new folder needed.
+ * (Audience pages live at the root in app/[audience].)
  */
 
-/** URL slug → shared shape for every landing page. */
-type LandingPage = {
+type LocationPage = {
   title: string;
   description: string;
 };
 
-const AUDIENCES = {
-  "for-colleges": {
-    title: "For Colleges",
-    description:
-      "Curriculum-aligned developer training, workshops, and placement preparation for college students.",
-  },
-  "for-schools": {
-    title: "For Schools",
-    description:
-      "Age-appropriate coding fundamentals that build confidence early — available online and on campus.",
-  },
-  "for-institutes": {
-    title: "For Institutes",
-    description:
-      "White-labeled technical programs and faculty support for training institutes.",
-  },
-} satisfies Record<string, LandingPage>;
-
-const LOCATIONS = {
+export const LOCATIONS = {
   "devwala-in-palwal": {
     title: "Devwala in Palwal",
     description:
@@ -47,12 +26,41 @@ const LOCATIONS = {
     description:
       "Devwala across Delhi NCR — weekend and weekday programs for students and professionals, taught online and at our centers.",
   },
-} satisfies Record<string, LandingPage>;
+  "devwala-in-delhi": {
+    title: "Devwala in Delhi",
+    description:
+      "Coding training in Delhi — live online classes and in-person mentorship for school students, college batches, and working professionals across the city.",
+  },
+  "devwala-in-gurugram": {
+    title: "Devwala in Gurugram",
+    description:
+      "Devwala in Gurugram — weekday and weekend developer programs for students and career switchers, with live online access and in-person sessions in the city's tech corridor.",
+  },
+  "devwala-in-noida": {
+    title: "Devwala in Noida",
+    description:
+      "Hands-on coding courses in Noida and Greater Noida — real projects, working-developer mentors, and batches timed for students and IT professionals.",
+  },
+  "devwala-in-ghaziabad": {
+    title: "Devwala in Ghaziabad",
+    description:
+      "Devwala in Ghaziabad — learn to code through live online classes or in-person training, with portfolio building and interview preparation included.",
+  },
+  "devwala-in-sonipat": {
+    title: "Devwala in Sonipat",
+    description:
+      "Developer training in Sonipat — classroom and online batches for students and faculty, from programming fundamentals to placement-ready projects.",
+  },
+  "devwala-in-rohtak": {
+    title: "Devwala in Rohtak",
+    description:
+      "Devwala in Rohtak — structured coding programs for college students and professionals, taught live online and with periodic in-person workshops.",
+  },
+  "devwala-in-meerut": {
+    title: "Devwala in Meerut",
+    description:
+      "Coding institute in Meerut — hands-on developer courses with flexible weekday and weekend batches, available online and through local sessions.",
+  },
+} satisfies Record<string, LocationPage>;
 
-/** Everything app/[landing] can render. */
-export const LANDING_PAGES = {
-  ...AUDIENCES,
-  ...LOCATIONS,
-} as const;
-
-export type LandingSlug = keyof typeof LANDING_PAGES;
+export type LocationSlug = keyof typeof LOCATIONS;
