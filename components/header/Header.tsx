@@ -24,6 +24,7 @@ type HeaderProps = {
 
 const DEFAULT_LINKS: NavItem[] = [
   { href: "/", label: "Home" },
+  { href: "/courses", label: "Courses" },
   { href: "/about", label: "About" },
 ];
 

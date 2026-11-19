@@ -14,12 +14,35 @@ and Delhi NCR.
 - [Home](https://devwala.com/): Start here — learn to code online or offline
 - [About](https://devwala.com/about): Who Devwala is and what it stands for
 - [Services](https://devwala.com/services): All training programs offered by Devwala
+- [Courses](https://devwala.com/courses): Catalog of 14 hands-on HTML5 and CSS3 courses
 - [Contact](https://devwala.com/contact): Ways to reach Devwala
 
 ## Services
 
 - [Technical Training](https://devwala.com/services/technical-training): Hands-on programming training — languages, frameworks, and real projects — online or at your campus
 - [Faculty Development Program](https://devwala.com/services/faculty-development): Upskilling programs that help faculty teach modern development practices
+
+## Courses (HTML5 & CSS3)
+
+Beginner:
+- [HTML5 Fundamentals](https://devwala.com/courses/html5-fundamentals): Tags, structure, and semantic elements — build a multi-page site by hand
+- [CSS3 Styling Essentials](https://devwala.com/courses/css3-styling-essentials): Selectors, box model, colors, and typography
+- [Responsive Web Design](https://devwala.com/courses/responsive-web-design): Media queries, fluid layouts, mobile-first thinking
+- [Flexbox & Grid Mastery](https://devwala.com/courses/flexbox-grid-mastery): The two layout systems behind every modern website
+
+Intermediate:
+- [HTML5 Forms & Validation](https://devwala.com/courses/html5-forms-validation): Input types, validation, error states, accessible forms
+- [CSS3 Animations & Transitions](https://devwala.com/courses/css3-animations-transitions): Hover states, keyframes, transforms — no JavaScript
+- [Semantic HTML & SEO](https://devwala.com/courses/semantic-html-seo): Markup search engines and AI assistants can read
+- [Web Accessibility](https://devwala.com/courses/web-accessibility): WCAG principles, ARIA, keyboard navigation, screen readers
+- [Typography & Color for the Web](https://devwala.com/courses/typography-color-web): Type scales, palettes, contrast, design tokens
+
+Advanced:
+- [CSS Architecture](https://devwala.com/courses/css-architecture): BEM, component styling, theming, Sass workflow
+- [CSS-Only Interactions](https://devwala.com/courses/css-only-interactions): Tabs, accordions, modals with :has() and container queries
+- [Landing Page from Design](https://devwala.com/courses/landing-page-from-design): Figma to production — pixel-accurate landing pages
+- [Email HTML Development](https://devwala.com/courses/email-html-development): HTML emails that render in Gmail, Outlook, and Apple Mail
+- [Portfolio Website Capstone](https://devwala.com/courses/portfolio-website-capstone): Plan, build, and deploy a portfolio site that gets interviews
 
 ## Who we train
 

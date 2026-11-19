@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 
 import { siteConfig } from "@/config/site";
 import { SERVICES } from "@/app/services/services";
+import { COURSES } from "@/app/courses/courses";
 import { AUDIENCES } from "@/app/[audience]/audiences";
 import { LOCATIONS } from "@/app/location/[landing]/landing";
 
@@ -14,12 +15,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Core pages
     { url: siteConfig.url, lastModified: now, changeFrequency: "weekly", priority: 1 },
     { url: url("/services"), lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: url("/courses"), lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: url("/contact"), lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: url("/about"), lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
     // Services (app/services/[service])
     ...Object.keys(SERVICES).map((slug) => ({
       url: url(`/services/${slug}`),
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
+
+    // Courses (app/courses/[course])
+    ...Object.keys(COURSES).map((slug) => ({
+      url: url(`/courses/${slug}`),
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.8,
